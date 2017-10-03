@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <v-header> </v-header>
     <loading :show="loadingShow"></loading>
     <router-view></router-view>
   </div>
@@ -8,9 +9,11 @@
 <script>
   import loading from './components/loading/loading.vue'
   import {mapState} from 'vuex'
+  import VHeader from './components/header/header.vue'
   export default {
     name: 'app',
     components: {
+      VHeader,
       loading
     },
     data () {
