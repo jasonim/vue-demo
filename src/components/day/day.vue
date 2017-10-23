@@ -29,7 +29,7 @@
     methods: {
       clearStyle () {
         this.$nextTick(() => {
-          var tags = this.$el.getElementsByTagName('img')
+          const tags = this.$el.getElementsByTagName('img')
           for (let i = 0; i < tags.length; i++) {
             tags[i].removeAttribute('style')
           }
