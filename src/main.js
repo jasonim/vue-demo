@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './vuex/store'
+// 引入滑动模块
+import infiniteScroll from 'vue-infinite-scroll'
+import vueLazyload from 'vue-lazylaod'
 
 Vue.config.productionTip = false
 
@@ -13,5 +16,5 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: { App }
+  components: { App, infiniteScroll, vueLazyload }
 })
