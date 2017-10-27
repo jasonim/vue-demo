@@ -37,9 +37,10 @@
     },
     methods: {
       loadTop () {
-        this.$store.commit('UPDATE_LOADING', true)
+        this.$store.commit('UPDATE_LOADING', false)
         this.page = 4
         this.$http.get(`https://gank.io/api/data/福利/10/${this.page}`).then((response) => {
+//          console.log(response)
           let left = response.body.results.filter((data, i) => {
             return (i + 1) % 2 === 1
           })
